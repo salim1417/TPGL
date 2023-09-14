@@ -2,17 +2,17 @@
  *
  * @author roudet
  */
-public class Orange {
+public class Banane {
     private double prix;
     private String origine;
 	
-    public Orange() 
+    public Banane () 
     {
         this.prix = 0.5;  //prix en euros
         this.origine="Espagne";
     }
     
-    public Orange(double prix, String origine) 
+    public Banane (double prix, String origine) 
     {
 	if(prix < 0)
 	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs
@@ -43,13 +43,13 @@ public class Orange {
 
     @Override
     public String toString(){
-        return "Orange de " + origine + " a " + prix + " euros";
+        return "Banane  de " + origine + " a " + prix + " euros";
     }
 
     @Override
     public boolean equals(Object o){  //predicat pour tester si 2 oranges sont equivalentes
         if(o != null && getClass() == o.getClass()){
-            Orange or = (Orange) o;
+            Banane  or = (Orange) o;
             return (prix == or.prix && origine.equals(or.origine));
         }
         return false;
@@ -62,8 +62,8 @@ public class Orange {
 
     public static void main (String[] args){
         //Ecrire ici vos tests
-	 Orange or1 = new Orange(2.00,"maroc");
-   	 Orange or2 = new Orange(5.00,"france");
+	 Banane  or1 = new Orange(2.00,"maroc");
+   	 Banane  or2 = new Orange(5.00,"france");
    	System.out.println(or1.getOrigine());
    }
 }
